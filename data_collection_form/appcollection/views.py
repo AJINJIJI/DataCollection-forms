@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from appcollection.models import Details
 from django.http import HttpResponse
 
 # Create your views here.
@@ -11,6 +12,8 @@ def data(request):
     student_age=request.POST['b']
     student_marks=request.POST['c']
     subject=request.POST['d']
+    data=Details(student_name=student_name,student_age=student_age)
+    data.save()
     
     
     if int(student_age) >=18 and int(student_marks) >=40:
