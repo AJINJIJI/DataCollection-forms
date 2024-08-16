@@ -7,15 +7,17 @@
 </head>
 <body>
    <div class="main-container">
+    
     <form action="data" method="post">
+        {% csrf_token %}
         <div class="row">
             <input type="text" placeholder="Student Name" name="a">  
                  </div>
         <div class="row">
-            <input type="text" placeholder="Student Age" name="b">  
+            <input type="int" placeholder="Student Age" name="b">  
                 </div>
         <div class="row">
-            <input type="text" placeholder="Student Total Marks" name="c">  
+            <input type="int" placeholder="Student Total Marks" name="c">  
                 </div>
         <div class="row">
             <input type="text" placeholder="Subject" name="d">  
@@ -24,11 +26,15 @@
              <div class="row">
                 <input class="btn" type="submit" >
              </div>
-
-             
+                
         </form>
     </div>
+<div class="req">
 
+    <h1>The Student is {{content1}} {{content2}}</h1>
+    
+
+</div>
 
     <style>
 
